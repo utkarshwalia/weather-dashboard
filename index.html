@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌤️ Weather Dashboard</h1>
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="Search city..." autocomplete="off">
+                <button id="searchBtn">Search</button>
+            </div>
+            <div id="error" class="error hidden"></div>
+        </header>
+
+        <main id="weatherContent" class="hidden">
+            <!-- Current Weather -->
+            <section class="current-weather">
+                <div class="location">
+                    <h2 id="cityName">--</h2>
+                    <span id="date">--</span>
+                </div>
+                <div class="weather-main">
+                    <div class="temp-display">
+                        <span id="temp">--°C</span>
+                        <img id="weatherIcon" src="" alt="Weather icon">
+                    </div>
+                    <p id="weatherDesc">--</p>
+                </div>
+                <div class="weather-details">
+                    <div class="detail">
+                        <span class="label">💧 Humidity</span>
+                        <span id="humidity">--%</span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">💨 Wind</span>
+                        <span id="wind">-- km/h</span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">🌡️ Feels Like</span>
+                        <span id="feelsLike">--°C</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5-Day Forecast -->
+            <section class="forecast">
+                <h3>5-Day Forecast</h3>
+                <div id="forecastContainer" class="forecast-grid"></div>
+            </section>
+        </main>
+
+        <!-- Saved Cities -->
+        <section class="saved-cities">
+            <h3>📌 Saved Cities</h3>
+            <div id="savedCities" class="saved-grid"></div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
